@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+:root {
+    /* Primary  */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    /** Gradients  */
+    --Light-slate-blue-bg: hsl(252, 100%, 67%);
+    --Light-royal-blue-bg: hsl(241, 81%, 54%);
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+    /**Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    /***/
+    --Light-red-bg: hsl(0, 100%, 98%);
+    --Orangey-yellow-bg: hsl(39, 100%, 98%);
+    --Green-teal-bg: hsl(166, 100%, 98%);
+    --Persian-blue-circle-bg: hsla(242, 100%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Pale-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    background-color: var(--White);
+    border-radius: 10px;
+}
+
+.left-box {
+    background-color: var(--Light-slate-blue-bg);
+    background-image: linear-gradient(var(--Light-slate-blue-bg), var(--Cobalt-blue));
+    padding: 1.5rem;
+    text-align: center;
+    width: 50%;
+    border-radius: 10px;
+}
+
+#result {
+    font-size: 18px;
+    color: var(--Pale-blue);
+    margin-bottom: 1rem
+}
+
+.circle {
+    margin: 2rem 0;
+    background-image: linear-gradient(var(--Violet-blue-circle), var(--Cobalt-blue));
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(50%);
+}
+
+.circle h1 {
+    color: var(--Light-lavender);
+    font-size: 5rem;
+}
+
+.circle p {
+    color: var(--Light-lavender)
+}
+
+.left-box h2 {
+    font-weight: 700;
+    color: var(--White);
+    margin-bottom: 1rem;
+}
+
+.left-box #stmnt {
+    width: 60%;
+    text-align: center;
+    transform: translateX(38%);
+    color: var(--Light-lavender);
+}
+
+.right-box {
+    padding: 2rem;
+    width: 50%;
+}
+
+.colored-box {
+    margin: 1rem 0;
+    padding: 6px;
+}
+
+#left-heading {
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--Dark-gray-blue)
+}
+
+.colored-box .inner-box {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.red-box {
+    background-color: var(--Light-red-bg);
+    border-radius: 7px;
+}
+
+.colored-box .inner-box div .red-text {
+    color: var(--Light-red);
+    opacity: .7;
+}
+
+.colored-box .inner-box div .fade {
+    color: var(--Dark-gray-blue);
+}
+
+.colored-box .inner-box div .percent {
+    color: var(--Dark-gray-blue);
+    opacity: .4;
+}
+
+.yellow-box {
+    background-color: var(--Orangey-yellow-bg);
+    border-radius: 7px;
+}
+
+.colored-box .inner-box div .yellow-text {
+    color: var(--Orangey-yellow);
+    opacity: .7;
+}
+
+.green-box {
+    background-color: var(--Green-teal-bg);
+    border-radius: 7px;
+}
+
+.colored-box .inner-box div .green-text {
+    color: var(--Green-teal);
+    opacity: .7;
+}
+
+.blue-box {
+    background-color: var(--Persian-blue-circle-bg);
+    border-radius: 7px;
+}
+
+.colored-box .inner-box div .blue-text {
+    color: var(--Cobalt-blue);
+    opacity: .7;
+}
+
+button {
+    color: var(--Pale-blue);
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 500;
+    background-color: var(--Dark-gray-blue);
+    border: none;
+    border-radius: 30px;
+}
+
+
+/**********     ACTIVE STATES    ************/
+
+button:hover {
+    background-image: linear-gradient(var(--Light-slate-blue-bg), var(--Cobalt-blue));
+    cursor: pointer;
+}
+
+
+/***************** Responsiveness website *****************/
+
+@media only screen and (max-width: 375px) {
+    body {
+        display: block;
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--White);
+        border-radius: 10px;
+    }
+    .left-box {
+        width: 100%;
+        height: 45vh;
+        border-radius: 0 0 20px 20px;
+    }
+    #result {
+        font-size: 1.5em;
+    }
+    .circle {
+        width: 10rem;
+        height: 10rem;
+        transform: translateX(40%);
+    }
+    .circle h1 {
+        color: var(--Light-lavender);
+        font-size: 4rem;
+    }
+    .circle p {
+        color: var(--Light-lavender);
+        font-size: 1rem;
+    }
+    .left-box h2 {
+        font-size: 1.2em;
+    }
+    .left-box #stmnt {
+        width: 60%;
+        font-size: 1em;
+        text-align: center;
+        color: var(--Light-lavender);
+    }
+    .right-box {
+        height: 55vh;
+        padding: 1rem;
+        width: 100%;
+    }
+    .colored-box {
+        margin: 1rem 0;
+        padding: 10px;
+    }
+    #left-heading {
+        font-weight: 800;
+        font-size: 1.5em;
+    }
+    .colored-box .inner-box {
+        padding: 10px;
+    }
+    .red-box {
+        font-size: 1.2rem;
+        border-radius: 15px;
+    }
+    img {
+        width: 1.2rem;
+    }
+    .yellow-box {
+        font-size: 1.2rem;
+        border-radius: 15px;
+    }
+    .green-box {
+        font-size: 1.2rem;
+        border-radius: 15px;
+    }
+    .blue-box {
+        border-radius: 15px;
+        font-size: 1.2rem;
+    }
+    button {
+        padding: 15px;
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+    body {
+        display: block;
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--White);
+        border-radius: 10px;
+    }
+    .left-box {
+        width: 100%;
+        height: 45vh;
+        border-radius: 0 0 20px 20px;
+    }
+    #result {
+        font-size: 1.5em;
+    }
+    .circle {
+        width: 10rem;
+        height: 10rem;
+    }
+    .circle h1 {
+        color: var(--Light-lavender);
+        font-size: 4rem;
+    }
+    .circle p {
+        color: var(--Light-lavender);
+        font-size: 1rem;
+    }
+    .left-box h2 {
+        font-size: 1.2em;
+    }
+    .left-box #stmnt {
+        width: 60%;
+        font-size: 1em;
+        text-align: center;
+        color: var(--Light-lavender);
+    }
+    .right-box {
+        height: 55vh;
+        padding: 1rem;
+        width: 100%;
+    }
+    .colored-box {
+        margin: 1rem 0;
+        padding: 10px;
+    }
+    #left-heading {
+        font-weight: 800;
+        font-size: 1.5em;
+    }
+    .colored-box .inner-box {
+        padding: 10px;
+    }
+    .red-box {
+        font-size: 1.2rem;
+        border-radius: 15px;
+    }
+    img {
+        width: 1.2rem;
+    }
+    .yellow-box {
+        font-size: 1.2rem;
+        border-radius: 15px;
+    }
+    .green-box {
+        font-size: 1.2rem;
+        border-radius: 15px;
+    }
+    .blue-box {
+        border-radius: 15px;
+        font-size: 1.2rem;
+    }
+    button {
+        padding: 15px;
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 50%;
+    }
+    .circle {
+        width: 10rem;
+        height: 10rem;
+    }
+    .circle h1 {
+        color: var(--Light-lavender);
+        font-size: 4rem;
+    }
+    .circle p {
+        color: var(--Light-lavender);
+        font-size: 1rem;
+    }
+}
